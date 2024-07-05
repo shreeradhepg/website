@@ -11,13 +11,13 @@ const Navbar: React.FC = () => {
 
   return (
     <div className="bg-white">
-      <div className='w-80vh h-[753px] bg-[#d9d9d9]/50'>
+      <div className='w-80vh h-[753px] bg-[#FFFCF2]'>
         <div className="container mx-[80px]">
           <nav className="bg-ECD2C5 border-gray-200">
             <div className="container mx-auto px-0 sm:px-0">
               <div className="flex items-center justify-between py-6">
                 <a href="#" className="flex items-center">
-                  <span className="text-lg text-[#FF7433] text-[32px] font-['Arvo'] font-bold whitespace-nowrap">SHREE RADHE</span>
+                  <span className="text-lg text-[#FF7433] text-[31px] font-['Arvo'] font-bold whitespace-nowrap">SHREE RADHE</span>
                 </a>
                 <div className="hidden lg:flex items-center space-x-8 text-[#04536c] text-[18px] font-['Arvo']">
                   {/* Menu items for desktop */}
@@ -131,7 +131,7 @@ const Navbar: React.FC = () => {
               <Content />
             </div>
             <div className='relative flex-shrink-0' style={{  }}>
-              <div className="relative" style={{ width: '1002px', height: '725px', left: '80px' }}>
+              <div className="relative" style={{ width: '1002px', height: '725px', left: '-119px' }}>
                 <img src="../images/blob.svg" style={{ position: 'absolute', width: '725px', height: '544px', objectFit: 'fill', transform: 'rotate(180deg)',top: '-25px',marginLeft:'45px' }} />
                 <img src="../images/s1_c.png" style={{ position: 'relative', width: '612px', height: '580px', objectFit: 'cover',top: '80px' }} />
               </div>

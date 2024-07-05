@@ -12,7 +12,7 @@ interface FooterProps {
 
 const Footer: React.FC<FooterProps> = () => {
   return (
-    <footer className="bg-[#D9D9D9]-60 py-10">
+    <footer className="bg-[#FFFCF2] py-10">
       <div className="container mx-auto  flex flex-col md:flex-row items-center justify-center px-0">
         <div className='flex flex-row'>
         <div className="mb-6 md:mb-0">
