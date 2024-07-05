@@ -1,5 +1,6 @@
 "use client";
 import React, { useState } from 'react';
+import Content from './Content';
 
 const Navbar: React.FC = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -10,15 +11,15 @@ const Navbar: React.FC = () => {
 
   return (
     <div className="bg-white">
-      <div style={{ backgroundColor: 'rgba(236, 210, 197, 0.6)', borderRadius: '0 0 300px 0' }}>
-        <div className="container mx-auto" style={{ width: '100%', height: 520, borderRadius: '0 0 300px 0' }}>
+      <div className='w-80vh h-[753px] bg-[#d9d9d9]/50'>
+        <div className="container mx-[80px]">
           <nav className="bg-ECD2C5 border-gray-200">
-            <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-              <div className="flex items-center justify-between">
-                <a href="#" className="flex">
-                  <span className="self-center text-lg font-semibold whitespace-nowrap">SHREE RADHE</span>
+            <div className="container mx-auto px-0 sm:px-0">
+              <div className="flex items-center justify-between py-6">
+                <a href="#" className="flex items-center">
+                  <span className="text-lg text-[#FF7433] text-[30px] font-['Arvo'] font-bold whitespace-nowrap">SHREE RADHE</span>
                 </a>
-                <div className="hidden items-center md:flex md:items-center md:space-x-8">
+                <div className="hidden lg:flex items-center space-x-8 text-[#04536c] text-[18px] font-['Arvo']">
                   {/* Menu items for desktop */}
                   <a
                     href="#"
@@ -125,6 +126,14 @@ const Navbar: React.FC = () => {
               )}
             </div>
           </nav>
+          <div className='relative flex justify-between'>
+            <div className='relative z-10 mt-[119px] flex-grow'>
+              <Content />
+            </div>
+            <div className='relative flex-shrink-0' style={{  top: '80px' }}>
+              <img src="../images/s1_c.png" style={{ width: '612px', height: '580px', objectFit: 'cover',left: '80px' }} />
+            </div>
+          </div>
         </div>
       </div>
     </div>

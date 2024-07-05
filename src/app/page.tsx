@@ -1,12 +1,18 @@
 // pages.tsx
 
 import React from 'react';
-import Navbar from './Navbar'; // Adjust the path as per your project structure
+import Navbar from './Navbar'; 
+import Footer from './Footer';
 
 const Pages: React.FC = () => {
   return (
     <div>
-      <Navbar />
+      <div>
+        <Navbar />
+      </div>
+      <div>
+        <Footer />
+      </div>
     </div>
   );
 };
