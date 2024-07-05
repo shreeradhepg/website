@@ -17,7 +17,7 @@ const Navbar: React.FC = () => {
             <div className="container mx-auto px-0 sm:px-0">
               <div className="flex items-center justify-between py-6">
                 <a href="#" className="flex items-center">
-                  <span className="text-lg text-[#FF7433] text-[30px] font-['Arvo'] font-bold whitespace-nowrap">SHREE RADHE</span>
+                  <span className="text-lg text-[#FF7433] text-[32px] font-['Arvo'] font-bold whitespace-nowrap">SHREE RADHE</span>
                 </a>
                 <div className="hidden lg:flex items-center space-x-8 text-[#04536c] text-[18px] font-['Arvo']">
                   {/* Menu items for desktop */}
@@ -130,8 +130,11 @@ const Navbar: React.FC = () => {
             <div className='relative z-10 mt-[119px] flex-grow'>
               <Content />
             </div>
-            <div className='relative flex-shrink-0' style={{  top: '80px' }}>
-              <img src="../images/s1_c.png" style={{ width: '612px', height: '580px', objectFit: 'cover',left: '80px' }} />
+            <div className='relative flex-shrink-0' style={{  }}>
+              <div className="relative" style={{ width: '1002px', height: '725px', left: '80px' }}>
+                <img src="../images/blob.svg" style={{ position: 'absolute', width: '725px', height: '544px', objectFit: 'fill', transform: 'rotate(180deg)',top: '-25px',marginLeft:'45px' }} />
+                <img src="../images/s1_c.png" style={{ position: 'relative', width: '612px', height: '580px', objectFit: 'cover',top: '80px' }} />
+              </div>
             </div>
           </div>
         </div>
