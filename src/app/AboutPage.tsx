@@ -22,7 +22,7 @@ const AboutPage: React.FC<AboutPageProps> = () => {
   };
 
   return (
-    <div className="flex flex-col md:flex-row items-center justify-center gap-10 bg-[#FFFCF2] relative">
+    <div className="flex flex-col mx-[80px] md:flex-row items-center justify-center gap-10 bg-[#FFFCF2] relative">
       <div className="w-full md:w-1/2 flex items-center justify-center relative h-[555px]">
         <video
           id="about-video"
@@ -32,14 +32,14 @@ const AboutPage: React.FC<AboutPageProps> = () => {
         <Button
           type="primary"
           shape="square"
-          className="absolute bottom-20 right-0"
+          className="absolute bottom-24 right-0"
           onClick={handleTogglePlay}
           icon={isPlaying ? <PauseCircleFilled style={{ fontSize: '24px', zIndex: 2 }} /> : <PlayCircleFilled style={{ fontSize: '24px', zIndex: 2 }} />}
           style={{ width: '88px', height: '65px', backgroundColor: "#ff7433", zIndex: 3 }}
         />
       </div>
       <div className="w-full md:w-1/2 flex flex-col items-center justify-center text-center">
-        <div className="text-[#ff7433] font-Mulish text-30 font-black leading-normal capitalize mb-4">
+        <div className="text-[#ff7433] font-Mulish text-[30px] font-black leading-[normal] capitalize mb-4">
           Our Story
         </div>
         <p className="text-[#04536c] font-Mulish text-16 leading-[1.4375rem] mb-4">

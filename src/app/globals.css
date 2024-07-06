@@ -1,3 +1,4 @@
+/* globals.css */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -23,4 +24,14 @@ body {
   .text-balance {
     text-wrap: balance;
   }
+}
+
+.lightgray {
+  background: url('/images/Room.jpg') 50% / cover no-repeat;
+  /* other styles */
+}
+
+.review {
+  background: url('/images/boy.jpg') 50% / cover no-repeat;
+  /* other styles */
 }

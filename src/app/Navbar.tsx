@@ -17,7 +17,7 @@ const Navbar: React.FC = () => {
             <div className="container mx-auto px-0 sm:px-0">
               <div className="flex items-center justify-between py-6">
                 <a href="#" className="flex items-center">
-                  <span className="text-lg text-[#FF7433] text-[31px] font-['Arvo'] font-bold whitespace-nowrap">SHREE RADHE</span>
+                  <span className="text-lg text-[#FF7433] text-[32px] font-['Arvo'] font-bold whitespace-nowrap">SHREE RADHE</span>
                 </a>
                 <div className="hidden lg:flex items-center space-x-8 text-[#04536c] text-[18px] font-['Arvo']">
                   {/* Menu items for desktop */}
@@ -126,7 +126,7 @@ const Navbar: React.FC = () => {
               )}
             </div>
           </nav>
-          <div className='relative flex justify-between'>
+          <div className='relative flex justify-between '>
             <div className='relative z-10 mt-[119px] flex-grow'>
               <Content />
             </div>
