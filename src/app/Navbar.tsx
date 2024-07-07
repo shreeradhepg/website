@@ -11,13 +11,13 @@ const Navbar: React.FC = () => {
 
   return (
     <div className="bg-white">
-      <div className='w-80vh h-[753px] bg-[#FFFCF2]'>
+      <div className='w-80vh h-[753px]'>
         <div className="container mx-[80px]">
           <nav className="bg-ECD2C5 border-gray-200">
             <div className="container mx-auto px-0 sm:px-0">
               <div className="flex items-center justify-between py-6">
                 <a href="#" className="flex items-center">
-                  <span className="text-lg text-[#FF7433] text-[32px] font-['Arvo'] font-bold whitespace-nowrap">SHREE RADHE</span>
+                  <span className="text-lg text-[#FF7433] text-[31px] font-['Arvo'] font-bold whitespace-nowrap">SHREE RADHE</span>
                 </a>
                 <div className="hidden lg:flex items-center space-x-8 text-[#04536c] text-[18px] font-['Arvo']">
                   {/* Menu items for desktop */}

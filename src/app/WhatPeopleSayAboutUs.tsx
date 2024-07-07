@@ -20,7 +20,7 @@ const WhatPeopleSayAboutUs: React.FC = () => {
     };
 
     return (
-        <div className="flex flex-col items-center justify-center bg-[#FFFCF2] md:w-[1347px] md:h-[574px] w-full">
+        <div className="flex flex-col items-center justify-center md:w-[1347px] md:h-[574px] w-full">
             {/* Title row */}
             <div className="text-[#ff7433] font-Mulish text-2xl font-extrabold leading-normal capitalize">
                 accommodation

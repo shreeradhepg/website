@@ -35,3 +35,19 @@ body {
   background: url('/images/boy.jpg') 50% / cover no-repeat;
   /* other styles */
 }
+
+
+.Facbook {
+  background: url('https://1.bp.blogspot.com/-S8HTBQqmfcs/XN0ACIRD9PI/AAAAAAAAAlo/FLhccuLdMfIFLhocRjWqsr9cVGdTN_8sgCPcBGAYYCw/s1600/f_logo_RGB-Blue_1024.png') 50% / cover no-repeat;
+  /* other styles */
+}
+
+.Instagram {
+  background: url('https://www.gatewayspesach.org/wp-content/uploads/2019/08/600px-Instagram_logo_2016.svg_-540x540.png') 50% / cover no-repeat;
+  /* other styles */
+}
+
+.Whatsapp {
+  background: url('https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/WhatsApp_logo-color-vertical.svg/1280px-WhatsApp_logo-color-vertical.svg.png') 50% / cover no-repeat;
+  /* other styles */
+}

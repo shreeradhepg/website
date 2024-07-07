@@ -2,8 +2,8 @@
 import React from "react";
 
 const WhatWeProvide: React.FC = () => (
-  <div className="w-auto h-[574px] flex flex-row items-start justify-around bg-[#FFFCF2] py-[48px] px-[80px]">
-    <div className="flex justify-center bg-[#FFFCF2] py-8 ">
+  <div className="w-auto h-[574px] flex flex-row items-start justify-around  py-[48px] px-[80px]">
+    <div className="flex justify-center  py-8 ">
       {/* First Column */}
       <div className="flex flex-col items-center gap-8">
         {/* First Card */}
@@ -155,7 +155,7 @@ const WhatWeProvide: React.FC = () => (
             </clipPath>
           </defs>
         </svg>
-        <span>Amet minim mollit non deserunt</span>
+        <span className="text-[#04536c]">Amet minim mollit non deserunt</span>
       </div>
       <div className="flex items-center gap-2.5">
         <svg
@@ -177,7 +177,7 @@ const WhatWeProvide: React.FC = () => (
             </clipPath>
           </defs>
         </svg>
-        <span>Amet minim mollit non deserunt</span>
+        <span className="text-[#04536c]">Amet minim mollit non deserunt</span>
       </div>
       <div className="flex items-center gap-2.5">
         <svg
@@ -199,7 +199,7 @@ const WhatWeProvide: React.FC = () => (
             </clipPath>
           </defs>
         </svg>
-        <span>Amet minim mollit non deserunt</span>
+        <span className="text-[#04536c]">Amet minim mollit non deserunt</span>
       </div>
 
       <div className="inline-flex justify-center items-center gap-5 py-3 px-8 rounded-2xl bg-[#ff7433] text-white font-['Mulish'] text-[.8125rem] leading-[normal] uppercase">

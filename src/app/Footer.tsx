@@ -8,7 +8,7 @@ interface FooterProps {
 
 const Footer: React.FC<FooterProps> = () => {
   return (
-    <footer className="bg-[#FFFCF2] py-10">
+    <footer className=" py-10">
       <div className="container mx-auto flex flex-col md:flex-row items-center justify-center px-4 md:px-0">
         <div className="flex flex-col md:flex-row md:space-x-10">
           {/* About Section */}

@@ -22,7 +22,7 @@ const AboutPage: React.FC<AboutPageProps> = () => {
   };
 
   return (
-    <div className="flex flex-col mx-[80px] md:flex-row items-center justify-center gap-10 bg-[#FFFCF2] relative">
+    <div className="flex flex-col mx-[80px] md:flex-row items-center justify-center gap-10 relative">
       <div className="w-full md:w-1/2 flex items-center justify-center relative h-[555px]">
         <video
           id="about-video"
