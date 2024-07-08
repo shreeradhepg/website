@@ -33,27 +33,27 @@ const Footer: React.FC<FooterProps> = () => {
             <ul className="mt-2 space-y-2 text-[#FF5200]">
               <li>
                 <a href="#" className="hover:text-[#FF5200]">
-                  Symptoms
+                  Accommodations
                 </a>
               </li>
               <li>
                 <a href="#" className="hover:text-[#FF5200]">
-                  Prevention
+                Facilities
                 </a>
               </li>
               <li>
                 <a href="#" className="hover:text-[#FF5200]">
-                  FAQs
+                  Pricing
                 </a>
               </li>
               <li>
                 <a href="#" className="hover:text-[#FF5200]">
-                  About Coronavirus
+                  Reviews
                 </a>
               </li>
               <li>
                 <a href="#" className="hover:text-[#FF5200]">
-                  Contact Us
+                  About Us
                 </a>
               </li>
             </ul>

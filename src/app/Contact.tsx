@@ -3,7 +3,7 @@ import React from 'react';
 
 const Contact: React.FC = () => (
   <div className="container">
-    <div className="header flex flex-col flex-shrink-0 w-[1347px] h-[555px] bg-gradient-to-b from-[#FF844A]/[.85] to-[#99461F]/[.85] justify-center">
+    <div className="header flex flex-col flex-shrink-0 w-[1327px] h-[555px] bg-gradient-to-b from-[#FF844A]/[.85] to-[#99461F]/[.85] justify-center">
       <div className='flex justify-between mr-[48px] mt-[0px]'>
         <div className='flex flex-col ml-[48px]'>
           <div className="title___description flex flex-col flex-shrink-0 items-start w-[15.3125rem] h-[5.5rem]">

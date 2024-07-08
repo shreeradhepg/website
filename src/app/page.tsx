@@ -1,6 +1,3 @@
-// pages.tsx
-
-
 import React from 'react';
 import Navbar from './Navbar'; 
 import Footer from './Footer';
@@ -14,32 +11,32 @@ import Facilities from './Facilities';
 
 const Pages: React.FC = () => {
   return (
-    <div>
-      <div>
+    <div className="overflow-x-hidden">
+      <div className='px-[90px]'>
         <Navbar />
       </div>
-      <div className='mt-[48px]'>
+      <div className='mt-[48px] px-[90px]'>
         <AboutPage />
       </div>
-      <div className='mt-[48px] px-20'>
+      <div className='mt-[48px] px-[90px]'>
         <Facilities />
       </div>
-      <div className='mt-[48px]'>
-      <WhatWeProvide/>
+      <div className='mt-[48px] px-[90px]'>
+        <WhatWeProvide />
       </div>
-      <div className='mt-[48px] px-20'>
-      <WhatPeopleSayAboutUs/>
+      <div className='mt-[48px] px-[90px]'>
+        <WhatPeopleSayAboutUs />
       </div>
-      <div className='mt-[48px] px-20'>
-      <Reviews/>
+      <div className='mt-[48px] px-[90px]'>
+        <Reviews />
       </div>
-      <div className='mt-[48px] px-20'>
-      <About/>
+      <div className='mt-[48px] px-[90px]'>
+        <About />
       </div>
-      <div className='mt-[48px] px-20'>
-      <Contact/>
+      <div className='mt-[48px] px-[90px]'>
+        <Contact />
       </div>
-      <div className='mt-[48px]'>
+      <div className='mt-[48px] px-[90px]'>
         <Footer />
       </div>
     </div>
