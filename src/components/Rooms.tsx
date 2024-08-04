@@ -14,7 +14,10 @@ import {
   AirVent,
   Ban,
   BookCopy,
+  Mail,
+  Phone,
   Save,
+  Send,
   Share,
   Upload,
   User2,
@@ -35,6 +38,8 @@ import { sendMail } from "@/lib/mail";
 import GuidelinesPagePhone from "./uiCustom/GuideLinePhone";
 import TabView from "./views/tabView";
 import Footer from "./Footer";
+import { FaWhatsapp } from "react-icons/fa6";
+import { MdWhatsapp } from "react-icons/md";
 
 const Rooms = () => {
   const [selectedGender, setSelectedGender] = useState(null);
@@ -174,6 +179,23 @@ const Rooms = () => {
       console.error("Failed to send email", error);
     }
   };
+  const handleSendWhatsApp = () => {
+    // Convert payload to a URL-encoded string
+    const message = Object.entries(payload)
+      .map(([key, value]) => `${key}: ${value}`)
+      .join("\n");
+
+    // Construct the WhatsApp URL with the message
+    const phoneNumber = "919265903832";
+    const whatsappUrl = `https://api.whatsapp.com/send?phone=${phoneNumber}&text=${encodeURIComponent(
+      message
+    )}&type=phone_number&app_absent=0`;
+
+    // Open the URL in a new tab
+    window.open(whatsappUrl, "_blank");
+  };
+
+  // Example usage
 
   return (
     <div>
@@ -238,8 +260,8 @@ const Rooms = () => {
               <Dialog>
                 <DialogTrigger>
                   <IconButton
-                    icon={Upload}
-                    text="Upload"
+                    icon={Send}
+                    text="Contact Us"
                     width="150px"
                     height="60px"
                     onClick={() => {
@@ -300,18 +322,32 @@ const Rooms = () => {
                     </DialogDescription>
                   </DialogHeader>
                   <DialogFooter>
-                    <IconButton
-                      icon={Share}
-                      text="Send Info"
-                      variant="primary"
-                      width="150px"
-                      height="50px"
-                      onClick={() => {
-                        console.log(payload);
-                        handleSendInfo();
-                      }}
-                      disabled={!(name !== "" && email !== "" && add1 !== "")}
-                    />
+                    <div className="flex gap-3">
+                      <IconButton
+                        icon={Mail}
+                        text="Mail Us"
+                        variant="primary"
+                        width="150px"
+                        height="50px"
+                        onClick={() => {
+                          console.log(payload);
+                          handleSendInfo();
+                        }}
+                        disabled={!(name !== "" && email !== "" && add1 !== "")}
+                      />
+                      <IconButton
+                        icon={Phone}
+                        text="WhatsApp"
+                        variant="primary"
+                        width="150px"
+                        height="50px"
+                        onClick={() => {
+                          console.log(payload);
+                          handleSendWhatsApp();
+                        }}
+                        disabled={!(name !== "" && email !== "" && add1 !== "")}
+                      />
+                    </div>
                   </DialogFooter>
                 </DialogContent>
               </Dialog>
@@ -444,18 +480,32 @@ const Rooms = () => {
                     </DialogDescription>
                   </DialogHeader>
                   <DialogFooter>
-                    <IconButton
-                      icon={Share}
-                      text="Send Info"
-                      variant="primary"
-                      width="150px"
-                      height="50px"
-                      onClick={() => {
-                        console.log(payload);
-                        handleSendInfo();
-                      }}
-                      disabled={!(name !== "" && email !== "" && add1 !== "")}
-                    />
+                    <div className="flex gap-3">
+                      <IconButton
+                        icon={Mail}
+                        text="Mail Us"
+                        variant="primary"
+                        width="150px"
+                        height="50px"
+                        onClick={() => {
+                          console.log(payload);
+                          handleSendInfo();
+                        }}
+                        disabled={!(name !== "" && email !== "" && add1 !== "")}
+                      />
+                      <IconButton
+                        icon={Phone}
+                        text="WhatsApp"
+                        variant="primary"
+                        width="150px"
+                        height="50px"
+                        onClick={() => {
+                          console.log(payload);
+                          handleSendWhatsApp();
+                        }}
+                        disabled={!(name !== "" && email !== "" && add1 !== "")}
+                      />
+                    </div>
                   </DialogFooter>
                 </DialogContent>
               </Dialog>
@@ -527,8 +577,8 @@ const Rooms = () => {
               <Dialog>
                 <DialogTrigger>
                   <IconButton
-                    icon={Upload}
-                    text="Upload"
+                    icon={Send}
+                    text="Conatct us"
                     width="150px"
                     height="60px"
                     onClick={() => {
@@ -591,18 +641,32 @@ const Rooms = () => {
                     </DialogDescription>
                   </DialogHeader>
                   <DialogFooter>
-                    <IconButton
-                      icon={Share}
-                      text="Send Info"
-                      variant="primary"
-                      width="150px"
-                      height="50px"
-                      onClick={() => {
-                        console.log(payload);
-                        handleSendInfo();
-                      }}
-                      disabled={!(name !== "" && email !== "" && add1 !== "")}
-                    />
+                    <div className="flex gap-3">
+                      <IconButton
+                        icon={Mail}
+                        text="Mail Us"
+                        variant="primary"
+                        width="150px"
+                        height="50px"
+                        onClick={() => {
+                          console.log(payload);
+                          handleSendInfo();
+                        }}
+                        disabled={!(name !== "" && email !== "" && add1 !== "")}
+                      />
+                      <IconButton
+                        icon={Phone}
+                        text="WhatsApp"
+                        variant="primary"
+                        width="150px"
+                        height="50px"
+                        onClick={() => {
+                          console.log(payload);
+                          handleSendWhatsApp();
+                        }}
+                        disabled={!(name !== "" && email !== "" && add1 !== "")}
+                      />
+                    </div>
                   </DialogFooter>
                 </DialogContent>
               </Dialog>

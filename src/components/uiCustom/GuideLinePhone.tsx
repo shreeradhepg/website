@@ -11,55 +11,49 @@ interface GenderGuide {
 
 const BoysGuide: GenderGuide = {
   dos: [
-    "Respect others' personal space.",
-    "Listen actively when someone is speaking.",
-    "Use polite language when communicating.",
-    "Help others when needed.",
-    "Maintain good hygiene.",
-    "Be punctual.",
-    "Follow school rules.",
-    "Be honest and truthful.",
-    "Participate in group activities.",
-    "Show kindness and empathy.",
+    "Respect local culture and customs",
+    "Keep your living space clean and organized",
+    "Pay rent and utilities on time",
+    "Participate in maintaining common areas",
+    "Be considerate of noise levels, especially at night",
+    "Inform the owner if you'll be away for extended periods",
+    "Use water and electricity responsibly",
+    "Follow safety protocols, including locking doors and windows",
+    "Resolve conflicts with roommates amicably",
+    "	Respect the privacy of other residents",
   ],
   donts: [
-    "Do not engage in physical fights.",
-    "Avoid using disrespectful language.",
-    "Do not bully others.",
-    "Avoid interrupting others.",
-    "Do not litter.",
-    "Avoid cheating.",
-    "Do not spread rumors.",
-    "Avoid exclusion of others.",
-    "Do not skip classes.",
-    "Avoid negative peer pressure.",
+    "Don't smoke inside the building",
+    "Don't consume alcohol it’s prohibited by PG rules",
+    "Don't invite guests without permission",
+    "Don't damage PG property",
+    "Don't engage in illegal activities",
+    "Don't play very loud music or create disturbances",
+    "Don't leave common areas messy after use",
   ],
 };
 
 const GirlsGuide: GenderGuide = {
   dos: [
-    "Support and encourage others.",
-    "Communicate assertively and respectfully.",
-    "Respect others' opinions and perspectives.",
-    "Help classmates and friends.",
-    "Maintain good personal hygiene.",
-    "Be on time.",
-    "Follow school guidelines.",
-    "Be truthful and honest.",
-    "Engage in group projects.",
-    "Be compassionate and understanding.",
+    "	Keep emergency contacts saved on your phone",
+    "	Lock your room when leaving",
+    "	Maintain cleanliness in your room and common areas",
+    "	Pay rent and dues on time",
+    "	Respect other residents' privacy and space",
+    "	Use shared facilities responsibly",
+    "	Report maintenance issues promptly",
+    "	Communicate politely with PG owner/manager",
+    "	Create a conducive study environment",
   ],
   donts: [
-    "Avoid spreading rumors or gossip.",
-    "Do not judge others based on appearance.",
-    "Avoid excluding others from activities.",
-    "Do not interrupt while others are talking.",
-    "Do not litter or create a mess.",
-    "Avoid dishonest behavior.",
-    "Do not engage in negative talk.",
-    "Avoid making fun of others.",
-    "Do not skip responsibilities.",
-    "Avoid negative influences.",
+    "Don't invite guests without permission",
+    "Don't allow overnight stays without prior approval",
+    "Don't make excessive noise, especially at night",
+    "Don't smoke or consume alcohol on the premises",
+    "Don't leave valuable items unattended",
+    "Don't share your room keys with others",
+    "Don't waste electricity or water",
+    "Don't engage in any illegal activities",
   ],
 };
 
@@ -81,7 +75,7 @@ const GuidelinesPagePhone: React.FC<GuidelinesPageProps> = ({
           text={`Guidelines`}
           onClick={() => setShowGuidelines(!showGuidelines)}
           width="150px"
-          height="50px" 
+          height="50px"
         />
       </div>
       <div className="flex flex-col items-center w-full h-[80vh] py-4">
@@ -106,9 +100,8 @@ const GuidelinesPagePhone: React.FC<GuidelinesPageProps> = ({
                   <h2 className="text-base font-bold mb-1">Dos</h2>
                   <ul className="list-none text-sm">
                     {currentGuide.dos.map((item, index) => (
-                      <li key={index} className="mb-1 flex items-center">
-                        <FaCheckCircle className="text-green-500 mr-1" />
-                        {item}
+                      <li key={index} className="mb-2 gap-2 flex items-center">
+                        <span className="text-primary">✔</span> {item}
                       </li>
                     ))}
                   </ul>

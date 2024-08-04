@@ -2,13 +2,14 @@
 import Image from "next/image";
 import React from "react";
 import heroSvg from "../../public/images/blob.svg";
-import heroImage from "../../public/images/s1-c.png";
+import heroImage from "../../public/images/heroimage.png";
 import DesktopView from "./views/desktopView";
 import MobileView from "./views/mobileView";
 import TabView from "./views/tabView";
 import { Search } from "lucide-react";
 import IconButton from "./uiCustom/IconButton";
 import { motion } from "framer-motion";
+import { redirect, useRouter } from "next/navigation";
 
 // Define animation variants
 const textVariants = {
@@ -27,8 +28,9 @@ const buttonVariants = {
 };
 
 const Hero: React.FC = () => {
+  const router = useRouter();
   const handleClick = () => {
-    alert("Button clicked!");
+    router.push("/contact");
   };
 
   return (
@@ -75,13 +77,13 @@ const Hero: React.FC = () => {
                 src={heroSvg}
                 style={{
                   position: "absolute",
-                  width: "325px",
+                  width: "425px",
                   height: "344px",
                   objectFit: "fill",
                   transform: "rotate(180deg)",
                   top: "20px",
                   left: "20px",
-                  marginLeft: "15vw",
+                  marginLeft: "1.5vw",
                 }}
                 alt="svg"
               />
@@ -89,11 +91,11 @@ const Hero: React.FC = () => {
                 src={heroImage}
                 style={{
                   position: "absolute",
-                  width: "312px",
+                  width: "512px",
                   height: "280px",
-                  objectFit: "cover",
-                  marginLeft: "12vw",
-                  bottom: "120px",
+                  objectFit: "contain",
+                  marginLeft: "-7vw",
+                  bottom: "160px",
                 }}
                 alt="svg"
               />
@@ -152,9 +154,9 @@ const Hero: React.FC = () => {
               src={heroSvg}
               style={{
                 position: "absolute",
-                width: "725px",
-                height: "544px",
-                objectFit: "fill",
+                width: "1025px",
+                height: "1044px",
+
                 transform: "rotate(180deg)",
                 top: "-105px",
                 marginLeft: "15vw",
@@ -226,12 +228,12 @@ const Hero: React.FC = () => {
               src={heroSvg}
               style={{
                 position: "absolute",
-                width: "725px",
+                width: "1125px",
                 height: "544px",
                 objectFit: "fill",
                 transform: "rotate(180deg)",
                 top: "-105px",
-                marginLeft: "15vw",
+                marginLeft: "3vw",
               }}
               alt="svg"
             />
@@ -239,10 +241,11 @@ const Hero: React.FC = () => {
               src={heroImage}
               style={{
                 position: "relative",
-                width: "612px",
-                height: "580px",
-                objectFit: "cover",
-                marginLeft: "12vw",
+                width: "812px",
+                height: "680px",
+                objectFit: "contain",
+                marginLeft: "8vw",
+                marginTop: "-10vh",
               }}
               alt="svg"
             />
