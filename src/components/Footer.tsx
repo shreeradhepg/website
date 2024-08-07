@@ -8,10 +8,14 @@ import {
   faTwitter,
   faInstagram,
   faYoutube,
+  faWhatsapp,
 } from "@fortawesome/free-brands-svg-icons";
 import DesktopView from "./views/desktopView";
 import MobileView from "./views/mobileView";
 import TabView from "./views/tabView";
+import Link from "next/link";
+import { Mail } from "lucide-react";
+import { FaMessage } from "react-icons/fa6";
 
 interface FooterProps {
   // Add any props you need here
@@ -38,22 +42,18 @@ const Footer: React.FC<FooterProps> = () => {
                 among post-graduate students.
               </p>
               <div className="mt-4 flex space-x-4">
-                <FontAwesomeIcon
-                  className="text-white w-[25px] h-[25px] hover:text-white"
-                  icon={faFacebookF}
-                />
-                <FontAwesomeIcon
-                  className="text-white w-[25px] h-[25px] hover:text-white"
-                  icon={faTwitter}
-                />
-                <FontAwesomeIcon
-                  className="text-white w-[25px] h-[25px] hover:text-white"
-                  icon={faInstagram}
-                />
-                <FontAwesomeIcon
-                  className="text-white w-[25px] h-[25px] hover:text-white"
-                  icon={faYoutube}
-                />
+                <Link
+                  target="_blank"
+                  href={`https://api.whatsapp.com/send?phone=918401238114&text=`}
+                >
+                  <FontAwesomeIcon
+                    className="text-white w-[25px] h-[25px] hover:text-white"
+                    icon={faWhatsapp}
+                  />
+                </Link>
+                <Link href="mailto:shreeradhepg123@gmail.com?subject=Hello%20Rahul%20Sir&body=I%20wanted%20to%20reach%20out%20to%20you%20regarding...">
+                  <Mail className="text-white" />
+                </Link>
               </div>
             </div>
 
@@ -106,22 +106,18 @@ const Footer: React.FC<FooterProps> = () => {
                 among post-graduate students.
               </p>
               <div className="mt-4 flex space-x-4">
-                <FontAwesomeIcon
-                  className="text-white w-[25px] h-[25px] hover:text-white"
-                  icon={faFacebookF}
-                />
-                <FontAwesomeIcon
-                  className="text-white w-[25px] h-[25px] hover:text-white"
-                  icon={faTwitter}
-                />
-                <FontAwesomeIcon
-                  className="text-white w-[25px] h-[25px] hover:text-white"
-                  icon={faInstagram}
-                />
-                <FontAwesomeIcon
-                  className="text-white w-[25px] h-[25px] hover:text-white"
-                  icon={faYoutube}
-                />
+                <Link
+                  target="_blank"
+                  href={`https://api.whatsapp.com/send?phone=918401238114&text=`}
+                >
+                  <FontAwesomeIcon
+                    className="text-white w-[25px] h-[25px] hover:text-white"
+                    icon={faWhatsapp}
+                  />
+                </Link>
+                <Link href="mailto:shreeradhepg123@gmail.com?subject=Hello%20Rahul%20Sir&body=I%20wanted%20to%20reach%20out%20to%20you%20regarding...">
+                  <Mail className="text-white" />
+                </Link>
               </div>
             </div>
 
@@ -174,22 +170,18 @@ const Footer: React.FC<FooterProps> = () => {
                 among post-graduate students.
               </p>
               <div className="mt-4 flex space-x-4">
-                <FontAwesomeIcon
-                  className="text-white w-[25px] h-[25px] hover:text-white"
-                  icon={faFacebookF}
-                />
-                <FontAwesomeIcon
-                  className="text-white w-[25px] h-[25px] hover:text-white"
-                  icon={faTwitter}
-                />
-                <FontAwesomeIcon
-                  className="text-white w-[25px] h-[25px] hover:text-white"
-                  icon={faInstagram}
-                />
-                <FontAwesomeIcon
-                  className="text-white w-[25px] h-[25px] hover:text-white"
-                  icon={faYoutube}
-                />
+                <Link
+                  target="_blank"
+                  href={`https://api.whatsapp.com/send?phone=918401238114&text=`}
+                >
+                  <FontAwesomeIcon
+                    className="text-white w-[25px] h-[25px] hover:text-white"
+                    icon={faWhatsapp}
+                  />
+                </Link>
+                <Link href="mailto:shreeradhepg123@gmail.com?subject=Hello%20Rahul%20Sir&body=I%20wanted%20to%20reach%20out%20to%20you%20regarding...">
+                  <Mail className="text-white" />
+                </Link>
               </div>
             </div>
 
