@@ -89,7 +89,7 @@ const Navbar = () => {
             <p>
               <span className="text-black">SHREE</span> RADHE
             </p>
-            <p className="mt-[-5px] sm:mt-[-10px] text-muted text-[12px] sm:text-[20px]">
+            <p className="mt-[-5px] sm:mt-[-10px] text-gray-700 text-[12px] sm:text-[20px]">
               Boys And Girls PG Service
             </p>
           </div>

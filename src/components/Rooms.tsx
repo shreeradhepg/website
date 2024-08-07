@@ -211,16 +211,22 @@ const Rooms = () => {
               Gender
             </div>
             <div className="flex gap-8">
-              <SelectableIcon
-                icon={FaMars}
-                isSelected={selectedGender === "male"}
-                onClick={() => handleGender("male")}
-              />
-              <SelectableIcon
-                icon={FaVenus}
-                isSelected={selectedGender === "female"}
-                onClick={() => handleGender("female")}
-              />
+              <div className="flex flex-col text-center gap-2">
+                <SelectableIcon
+                  icon={FaMars}
+                  isSelected={selectedGender === "male"}
+                  onClick={() => handleGender("male")}
+                />
+                Male
+              </div>
+              <div className="flex flex-col text-center gap-2">
+                <SelectableIcon
+                  icon={FaVenus}
+                  isSelected={selectedGender === "female"}
+                  onClick={() => handleGender("female")}
+                />
+                Female
+              </div>
             </div>
 
             <div className="flex gap-3 font-bold text-[20px] items-center">
@@ -338,17 +344,21 @@ const Rooms = () => {
             <div className="flex gap-3 font-bold text-[20px] items-center">
               Gender
             </div>
-            <div className="flex gap-8">
+            <div className="flex flex-col text-center gap-2">
               <SelectableIcon
                 icon={FaMars}
                 isSelected={selectedGender === "male"}
                 onClick={() => handleGender("male")}
               />
+              Male
+            </div>
+            <div className="flex flex-col text-center gap-2">
               <SelectableIcon
                 icon={FaVenus}
                 isSelected={selectedGender === "female"}
                 onClick={() => handleGender("female")}
               />
+              Female
             </div>
 
             <div className="flex gap-3 font-bold text-[20px] items-center">
@@ -370,16 +380,22 @@ const Rooms = () => {
               You are Parent / Student
             </div>
             <div className="flex gap-8">
-              <SelectableIcon
-                icon={RiParentLine}
-                isSelected={child === "AC"}
-                onClick={() => handleAC("AC")}
-              />
-              <SelectableIcon
-                icon={PiStudent}
-                isSelected={child === "NonAC"}
-                onClick={() => handleAC("NonAC")}
-              />
+              <div className="flex flex-col text-center gap-2">
+                <SelectableIcon
+                  icon={FaMars}
+                  isSelected={selectedGender === "male"}
+                  onClick={() => handleGender("male")}
+                />
+                Male
+              </div>
+              <div className="flex flex-col text-center gap-2">
+                <SelectableIcon
+                  icon={FaVenus}
+                  isSelected={selectedGender === "female"}
+                  onClick={() => handleGender("female")}
+                />
+                Female
+              </div>
             </div>
             <div className="flex my-4">
               <Dialog>
@@ -471,16 +487,22 @@ const Rooms = () => {
               Gender
             </div>
             <div className="flex gap-8">
-              <SelectableIcon
-                icon={FaMars}
-                isSelected={selectedGender === "male"}
-                onClick={() => handleGender("male")}
-              />
-              <SelectableIcon
-                icon={FaVenus}
-                isSelected={selectedGender === "female"}
-                onClick={() => handleGender("female")}
-              />
+              <div className="flex flex-col text-center gap-2">
+                <SelectableIcon
+                  icon={FaMars}
+                  isSelected={selectedGender === "male"}
+                  onClick={() => handleGender("male")}
+                />
+                Male
+              </div>
+              <div className="flex flex-col text-center gap-2">
+                <SelectableIcon
+                  icon={FaVenus}
+                  isSelected={selectedGender === "female"}
+                  onClick={() => handleGender("female")}
+                />
+                Female
+              </div>
             </div>
 
             <div className="flex gap-3 font-bold text-[20px] items-center">
