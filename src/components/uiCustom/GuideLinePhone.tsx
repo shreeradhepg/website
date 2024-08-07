@@ -69,7 +69,7 @@ const GuidelinesPagePhone: React.FC<GuidelinesPageProps> = ({
 
   return (
     <>
-      <div className="flex justify-center mt-4">
+      <div className="flex  mt-4">
         <IconButton
           icon={showGuidelines ? ChevronUp : ChevronDown}
           text={`Guidelines`}
@@ -78,7 +78,7 @@ const GuidelinesPagePhone: React.FC<GuidelinesPageProps> = ({
           height="50px"
         />
       </div>
-      <div className="flex flex-col items-center w-full h-[80vh] py-4">
+      <div className="flex flex-col items-center w-full  py-4">
         {showGuidelines && (
           <motion.div
             initial={{ height: 0, opacity: 0 }}

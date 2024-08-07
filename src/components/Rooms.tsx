@@ -40,11 +40,13 @@ import TabView from "./views/tabView";
 import Footer from "./Footer";
 import { FaWhatsapp } from "react-icons/fa6";
 import { MdWhatsapp } from "react-icons/md";
+import { RiParentLine } from "react-icons/ri";
+import { PiStudent } from "react-icons/pi";
 
 const Rooms = () => {
   const [selectedGender, setSelectedGender] = useState(null);
   const [sharing, setSharing] = useState(null);
-  const [ac, setAc] = useState(null);
+  const [child, setChild] = useState(null);
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [add1, setAdd1] = useState("");
@@ -56,18 +58,16 @@ const Rooms = () => {
   const handleSharing = (share: any) => {
     setSharing(share);
   };
-  const handleAC = (ac: any) => {
-    setAc(ac);
+  const handleAC = (child: any) => {
+    setChild(child);
   };
 
   const payload = {
     gender: selectedGender,
     sharing: sharing,
-    ac: ac,
+    consulting: child,
     name,
-    email,
-    addressLine1: add1,
-    addressLine2: add2,
+    phone: email,
   };
 
   const handleSendInfo = async () => {
@@ -132,7 +132,7 @@ const Rooms = () => {
         </tr>
         <tr>
             <th>AC</th>
-            <td>${payload.ac}</td>
+            <td>${payload.consulting}</td>
         </tr>
         <tr>
             <th>Name</th>
@@ -140,16 +140,9 @@ const Rooms = () => {
         </tr>
         <tr>
             <th>Email</th>
-            <td>${payload.email}</td>
+            <td>${payload.phone}</td>
         </tr>
-        <tr>
-            <th>Address Line 1</th>
-            <td>${payload.addressLine1}</td>
-        </tr>
-        <tr>
-            <th>Address Line 2</th>
-            <td>${payload.addressLine2}</td>
-        </tr>
+        
     </table>
 </div>
 
@@ -186,7 +179,7 @@ const Rooms = () => {
       .join("\n");
 
     // Construct the WhatsApp URL with the message
-    const phoneNumber = "919265903832";
+    const phoneNumber = "918401238114";
     const whatsappUrl = `https://api.whatsapp.com/send?phone=${phoneNumber}&text=${encodeURIComponent(
       message
     )}&type=phone_number&app_absent=0`;
@@ -199,6 +192,10 @@ const Rooms = () => {
 
   return (
     <div>
+      <div className="capitalize  bg-primary  mx-12 sm:text-center  my-2 sm:my-5 mb-[20px] sm:mb-[60px] shadow-2xl p-4 rounded-md text-white  ">
+        <strong>Notice : </strong>
+        Kindly Fill Out This form if the line is busy
+      </div>
       <MobileView>
         <div className="flex">
           <div className="flex flex-col px-12 oswald gap-3">
@@ -225,7 +222,7 @@ const Rooms = () => {
                 onClick={() => handleGender("female")}
               />
             </div>
-            <GuidelinesPagePhone selectedGender={selectedGender} />
+
             <div className="flex gap-3 font-bold text-[20px] items-center">
               Room Sharing
             </div>
@@ -242,20 +239,21 @@ const Rooms = () => {
               />
             </div>
             <div className="flex gap-3 font-bold text-[20px] items-center">
-              AC / Non Ac
+              You are Parent / Student
             </div>
             <div className="flex gap-8">
               <SelectableIcon
-                icon={AirVent}
-                isSelected={ac === "AC"}
-                onClick={() => handleAC("AC")}
+                icon={RiParentLine}
+                isSelected={child === "parent"}
+                onClick={() => handleAC("parent")}
               />
               <SelectableIcon
-                icon={Ban}
-                isSelected={ac === "NonAC"}
-                onClick={() => handleAC("NonAC")}
+                icon={PiStudent}
+                isSelected={child === "student"}
+                onClick={() => handleAC("student")}
               />
             </div>
+            <GuidelinesPagePhone selectedGender={selectedGender} />
             <div className="flex my-4">
               <Dialog>
                 <DialogTrigger>
@@ -269,7 +267,7 @@ const Rooms = () => {
                     }}
                     disabled={
                       !(
-                        ac !== null &&
+                        child !== null &&
                         selectedGender !== null &&
                         sharing !== null
                       )
@@ -292,30 +290,13 @@ const Rooms = () => {
                           />
                         </div>
                         <div className="flex flex-col gap-3 w-full text-black text-[14px]">
-                          <p>Email</p>
+                          <p>Mobile Number</p>
                           <input
                             type="text"
-                            placeholder="rahul@123"
+                            placeholder="93523***21"
                             className="p-2 bg-transparent border-solid border-primary border-[1px] text-primary placeholder:text-black rounded-xl focus:outline-0"
                             value={email}
                             onChange={(e) => setEmail(e.target.value)}
-                          />
-                        </div>
-                        <div className="flex flex-col gap-3 w-full text-black text-[14px]">
-                          <p>Address</p>
-                          <input
-                            type="text"
-                            placeholder="Address Line 1"
-                            className="p-2 bg-transparent border-solid border-primary border-[1px] text-primary placeholder:text-black rounded-xl focus:outline-0"
-                            value={add1}
-                            onChange={(e) => setAdd1(e.target.value)}
-                          />
-                          <input
-                            type="text"
-                            placeholder="Address Line 2"
-                            className="p-2 bg-transparent border-solid border-primary border-[1px] text-primary placeholder:text-black rounded-xl focus:outline-0"
-                            value={add2}
-                            onChange={(e) => setAdd2(e.target.value)}
                           />
                         </div>
                       </div>
@@ -323,18 +304,6 @@ const Rooms = () => {
                   </DialogHeader>
                   <DialogFooter>
                     <div className="flex gap-3">
-                      <IconButton
-                        icon={Mail}
-                        text="Mail Us"
-                        variant="primary"
-                        width="150px"
-                        height="50px"
-                        onClick={() => {
-                          console.log(payload);
-                          handleSendInfo();
-                        }}
-                        disabled={!(name !== "" && email !== "" && add1 !== "")}
-                      />
                       <IconButton
                         icon={Phone}
                         text="WhatsApp"
@@ -345,7 +314,7 @@ const Rooms = () => {
                           console.log(payload);
                           handleSendWhatsApp();
                         }}
-                        disabled={!(name !== "" && email !== "" && add1 !== "")}
+                        disabled={!(name !== "" && email !== "")}
                       />
                     </div>
                   </DialogFooter>
@@ -398,17 +367,17 @@ const Rooms = () => {
               />
             </div>
             <div className="flex gap-3 font-bold text-[20px] items-center">
-              AC / Non Ac
+              You are Parent / Student
             </div>
             <div className="flex gap-8">
               <SelectableIcon
-                icon={AirVent}
-                isSelected={ac === "AC"}
+                icon={RiParentLine}
+                isSelected={child === "AC"}
                 onClick={() => handleAC("AC")}
               />
               <SelectableIcon
-                icon={Ban}
-                isSelected={ac === "NonAC"}
+                icon={PiStudent}
+                isSelected={child === "NonAC"}
                 onClick={() => handleAC("NonAC")}
               />
             </div>
@@ -425,7 +394,7 @@ const Rooms = () => {
                     }}
                     disabled={
                       !(
-                        ac !== null &&
+                        child !== null &&
                         selectedGender !== null &&
                         sharing !== null
                       )
@@ -459,40 +428,11 @@ const Rooms = () => {
                             />
                           </div>
                         </div>
-                        <div className="flex flex-col gap-3 w-[100%] text-black text-[16px]">
-                          <p>Address</p>
-                          <input
-                            type="text"
-                            placeholder="Address Line 1"
-                            className="p-3 bg-transparent border-solid border-primary border-[1px] text-primary placeholder:text-black rounded-xl focus:outline-0"
-                            value={add1}
-                            onChange={(e) => setAdd1(e.target.value)}
-                          />
-                          <input
-                            type="text"
-                            placeholder="Address Line 2"
-                            className="p-3 bg-transparent border-solid border-primary border-[1px] text-primary placeholder:text-black rounded-xl focus:outline-0"
-                            value={add2}
-                            onChange={(e) => setAdd2(e.target.value)}
-                          />
-                        </div>
                       </div>
                     </DialogDescription>
                   </DialogHeader>
                   <DialogFooter>
                     <div className="flex gap-3">
-                      <IconButton
-                        icon={Mail}
-                        text="Mail Us"
-                        variant="primary"
-                        width="150px"
-                        height="50px"
-                        onClick={() => {
-                          console.log(payload);
-                          handleSendInfo();
-                        }}
-                        disabled={!(name !== "" && email !== "" && add1 !== "")}
-                      />
                       <IconButton
                         icon={Phone}
                         text="WhatsApp"
@@ -503,7 +443,7 @@ const Rooms = () => {
                           console.log(payload);
                           handleSendWhatsApp();
                         }}
-                        disabled={!(name !== "" && email !== "" && add1 !== "")}
+                        disabled={!(name !== "" && email !== "")}
                       />
                     </div>
                   </DialogFooter>
@@ -559,18 +499,18 @@ const Rooms = () => {
               />
             </div>
             <div className="flex gap-3 font-bold text-[20px] items-center">
-              AC / Non Ac
+              You are Parent / Student
             </div>
             <div className="flex gap-8">
               <SelectableIcon
-                icon={AirVent}
-                isSelected={ac === "AC"}
-                onClick={() => handleAC("AC")}
+                icon={RiParentLine}
+                isSelected={child === "parent"}
+                onClick={() => handleAC("parent")}
               />
               <SelectableIcon
-                icon={Ban}
-                isSelected={ac === "NonAC"}
-                onClick={() => handleAC("NonAC")}
+                icon={PiStudent}
+                isSelected={child === "student"}
+                onClick={() => handleAC("student")}
               />
             </div>
             <div className="flex my-4">
@@ -586,7 +526,7 @@ const Rooms = () => {
                     }}
                     disabled={
                       !(
-                        ac !== null &&
+                        child !== null &&
                         selectedGender !== null &&
                         sharing !== null
                       )
@@ -610,50 +550,21 @@ const Rooms = () => {
                             />
                           </div>
                           <div className="flex flex-col gap-3 w-1/2 text-black text-[16px]">
-                            <p>Email</p>
+                            <p>Mobile Number</p>
                             <input
                               type="text"
-                              placeholder="rahul@123"
+                              placeholder="9843***215"
                               className="p-3 bg-transparent border-solid border-primary border-[1px] text-primary placeholder:text-black rounded-xl focus:outline-0"
                               value={email}
                               onChange={(e) => setEmail(e.target.value)}
                             />
                           </div>
                         </div>
-                        <div className="flex flex-col gap-3 w-[100%] text-black text-[16px]">
-                          <p>Address</p>
-                          <input
-                            type="text"
-                            placeholder="Address Line 1"
-                            className="p-3 bg-transparent border-solid border-primary border-[1px] text-primary placeholder:text-black rounded-xl focus:outline-0"
-                            value={add1}
-                            onChange={(e) => setAdd1(e.target.value)}
-                          />
-                          <input
-                            type="text"
-                            placeholder="Address Line 2"
-                            className="p-3 bg-transparent border-solid border-primary border-[1px] text-primary placeholder:text-black rounded-xl focus:outline-0"
-                            value={add2}
-                            onChange={(e) => setAdd2(e.target.value)}
-                          />
-                        </div>
                       </div>
                     </DialogDescription>
                   </DialogHeader>
                   <DialogFooter>
                     <div className="flex gap-3">
-                      <IconButton
-                        icon={Mail}
-                        text="Mail Us"
-                        variant="primary"
-                        width="150px"
-                        height="50px"
-                        onClick={() => {
-                          console.log(payload);
-                          handleSendInfo();
-                        }}
-                        disabled={!(name !== "" && email !== "" && add1 !== "")}
-                      />
                       <IconButton
                         icon={Phone}
                         text="WhatsApp"
@@ -664,7 +575,7 @@ const Rooms = () => {
                           console.log(payload);
                           handleSendWhatsApp();
                         }}
-                        disabled={!(name !== "" && email !== "" && add1 !== "")}
+                        disabled={!(name !== "" && email !== "")}
                       />
                     </div>
                   </DialogFooter>

@@ -62,27 +62,27 @@ const Footer: React.FC<FooterProps> = () => {
               <h5 className="text-xl font-bold mt-8 text-white">Quick Links</h5>
               <ul className="mt-2 space-y-2 text-white">
                 <li>
-                  <a href="#" className="hover:text-white">
-                    Accommodations
+                  <a href="/" className="hover:text-white">
+                    Home
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="hover:text-white">
+                  <a href="/amenities" className="hover:text-white">
                     Facilities
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="hover:text-white">
-                    Pricing
+                  <a href="/contact" className="hover:text-white">
+                    Contact Us
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="hover:text-white">
-                    Reviews
+                  <a href="/location" className="hover:text-white">
+                    Location
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="hover:text-white">
+                  <a href="/about" className="hover:text-white">
                     About Us
                   </a>
                 </li>

@@ -99,9 +99,7 @@ const AboutPage: React.FC<AboutPageProps> = () => {
               most of your college years. Choose Shree Radhe PG and enjoy your
               studies while we take care of the rest.
             </p>
-            <div className="py-3 px-8 rounded-2xl bg-primary text-white font-Mulish text-[.8125rem] leading-normal uppercase mb-4">
-              Read more
-            </div>
+           
           </motion.div>
         </motion.div>
       </MobileView>
